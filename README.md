@@ -50,6 +50,14 @@ The model is based on the Reflexion agentic workflow by Shinn et al. https://git
 
 The model is prone to hallucinate a lot, so always validate the generated ideas!
 
+## 🔧 TODO
+
+- [ ] Improve the idea generation algorithm for more diverse outputs.
+- [ ] Add support for more customizable prompt options.
+- [ ] Implement a feedback loop for users to rate the quality of generated ideas.
+- [ ] Integrate with external databases for real-time scientific data.
+- [ ] Visualize the hypotheses in embedding space.
+
 
 ## 🤝 Contributing
 
