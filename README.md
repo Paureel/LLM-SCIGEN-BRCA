@@ -5,7 +5,7 @@
 
 Welcome to **Scientific Hypothesis Generator in Breast Cancer research**! This project leverages the power of large language models to assist researchers, scientists, and enthusiasts in generating innovative scientific ideas given the output of statistical learning models in breast cancer research.
 
-<p style="color:red;">Important note: The agentic LLM workflow still prone to hallucinate a lot. Always double check the generated hypotheses for biological validity. </p>
+<span style="color:red;">Important note: The agentic LLM workflow still prone to hallucinate a lot. Always double check the generated hypotheses for biological validity. Treat this solution as an interesting experiment. </span>
 
 ## 📚 Overview
 
