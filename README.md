@@ -7,7 +7,7 @@ Welcome to **Scientific Hypothesis Generator in Breast Cancer research**! This p
 
 
 ```diff
-- Important note: The agentic LLM workflow still prone to hallucinate a lot. Always double check the generated hypotheses for biological validity. Treat this solution as an interesting experiment.
+- Important note: The agentic LLM workflow is still prone to hallucinating. Always double-check the generated hypotheses for biological validity. Treat this solution as an interesting experiment.
 
 ```
 
