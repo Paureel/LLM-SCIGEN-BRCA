@@ -51,6 +51,13 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+Using NVIDIA NIM:
+
+```bash
+streamlit nvapp.py
+```
+
+
 
 2. Download the embeddings from: [Drive](https://drive.google.com/drive/folders/1aamlEnTeM-Q13dbk2TRUX8dX6UXfQ3Ra?usp=sharing)
 
