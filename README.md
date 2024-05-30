@@ -5,15 +5,24 @@
 
 Welcome to **Scientific Hypothesis Generator in Breast Cancer research**! This project leverages the power of large language models to assist researchers, scientists, and enthusiasts in generating innovative scientific ideas given the output of statistical learning models in breast cancer research.
 
+<p style="color:red;">Important note: The agentic LLM workflow still prone to hallucinate a lot. Always double check the generated hypotheses for biological validity. </p>
+
 ## 📚 Overview
 
 ![Project Banner](reflexion_v1_nvidia.png) 
+
+## 🚀 NVIDIA AI components used for the development of the workflow
+
+The model comes in two versions:
+
+- **LLM-SCIGEN-BRCA-NVIDIA**: Based on the gpt-4o model and LLAMA-3-80B-instruct models (the LLAMA-3 model is reached through NVIDIA NIM), using the NVIDIA embed-qa-4 model for the embedding using NVIDIA NIM. Using NVIDIA NeMo-Guardrails. The gpt-4o model will be completely replaced as soon as the function calling will be available through the Langchain-NVIDIA functions.
+- **LLM-SCIGEN-BRCA**: Based on the gpt-4o model, using the text-embedding-3-large model for the embedding. Using NVIDIA NeMo-Guardrails.
 
 
 ## 📚 Features
 
 - **Hypothesis Generation**: Generate unique, and testable scientific hypothesis based on the output of statistical learning tools, representable on gene level (DeSeq2, ..).
-- **Customizable Vector Database**: Tailor the vector database to fit your specific field or area of interest (tested on papers related to breast cancer research).
+- **Customizable Vector Database**: Tailor the vector database to fit your specific field or area of interest (tested on papers related to breast cancer research). The current model uses the following database (stored in a ChromaDB database) of more than 9000 scientific publication abstracts in breast cancer research:  [database](https://huggingface.co/datasets/Gaborandi/breast_cancer_pubmed_abstracts)
 - **High-Quality Output**: Utilizes state-of-the-art language models to ensure high relevance and quality of generated ideas, with in-vitro and in-silico validation recommendations.
 - **User-Friendly Interface**: Easy-to-use interface for seamless idea generation, using the streamlit framework.
 
@@ -39,21 +48,33 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-2. Fill out the fields in the app. First set your NVIDIA API key. Then enter the gene names which were indicated as important or differentially expressed (you can specify the direction as well, the prompting is quite flexible, for example: *TP53* (upregulated), *BRCA1* (downregulated)). Specify the disease type (for example triple negative breast cancer). Enter the target variable, which is just basically the variable you used to fit your statistical learning model (for example: cisplatin sensitive/resistant subgroups). Again, you can be quite flexible when it comes to prompting, the model will incorporate any additional information.
+2. Download the embeddings from: [Drive](https://drive.google.com/drive/folders/1Y1QyJxRH4bFeR2nsDf5cQJLU-ikRURdQ?usp=sharing)
+
+3. Fill out the fields in the app. First set your NVIDIA API key. Then enter the gene names which were indicated as important or differentially expressed (you can specify the direction as well, the prompting is quite flexible, for example: *TP53* (upregulated), *BRCA1* (downregulated)). Specify the disease type (for example triple negative breast cancer). Enter the target variable, which is just basically the variable you used to fit your statistical learning model (for example: cisplatin sensitive/resistant subgroups). Again, you can be quite flexible when it comes to prompting, the model will incorporate any additional information.
 
 
 ## 🧩 How It Works
 
 The model is based on the Reflexion agentic workflow by Shinn et al. https://github.com/langchain-ai/langgraph/blob/main/examples/reflexion/reflexion.ipynb. By inputting a custom prompt, the model generates a series of potential ideas or research questions that could inspire your next scientific endeavor.
 
+The final output is a csv file, with the following columns:
+
+- **Hypotheses short description**: One sentence description of the hypothesis.
+- **Generated Hypotheses**: Long description of the generated hypothesis.
+- **Novelty**: 1-10 score on novelty.
+- **What is not novel**: Description of what is not novel.
+- **Missing**: What is missing from the description of the hypothesis.
+- **Superfluous**: What is redundant in the description of the hypothesis.
+- **Flag**: Is there anything unusual about the input?
+- **References**: References from the literature.
+- **Biohazard**: Is there anything dangerous in the generated hypothesis?
+- **Relations to literature**: Description on how the hypothesis relates to the published papers in the field.
+
 ## Customizations powered by Nvidia
 
 - NeMo Guardrails
 - Foundation models through the NVIDIA NIM APIs or endpoints
 
-## IMPORTANT
-
-The model is prone to hallucinate a lot, so always validate the generated ideas!
 
 ## 🔧 TODO
 
