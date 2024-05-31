@@ -32,7 +32,7 @@ The model comes in two versions:
 
 ## 🌟 Demo
 
-Check out our [live demo](https://example.com/demo) to see the app in action!
+Check out our [live demo](https://scigenllmagent.site/) to see the app in action!
 
 ## 🛠️ Installation
 
