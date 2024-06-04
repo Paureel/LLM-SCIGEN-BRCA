@@ -3,7 +3,7 @@
 ![Project Banner](banner.png) 
 ## 🚀 Introduction
 
-Welcome to **Scientific Hypothesis Generator in Breast Cancer research**! This project leverages the power of large language models to assist researchers, scientists, and enthusiasts in generating innovative scientific ideas given the output of statistical learning models in breast cancer research. Built with **NVIDIA NIM** and **Langchain**.
+Welcome to **Scientific Hypothesis Generator in Breast Cancer research**! This project leverages the power of large language models to assist researchers, scientists, and enthusiasts in generating innovative scientific ideas given the output of statistical learning models in breast cancer research. Built with **NVIDIA NIM** and **Langchain**. Submission for the Generative AI Agents Developer Contest by NVIDIA and LangChain (https://www.nvidia.com/en-sg/ai-data-science/generative-ai/developer-contest-with-langchain/).
 
 
 ```diff
