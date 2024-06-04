@@ -61,7 +61,7 @@ streamlit nvapp.py
 
 2. Download the embeddings from: [Drive](https://drive.google.com/drive/folders/1aamlEnTeM-Q13dbk2TRUX8dX6UXfQ3Ra?usp=sharing)
 
-3. Fill out the fields in the app. First set your NVIDIA API key. Then enter the gene names which were indicated as important or differentially expressed (you can specify the direction as well, the prompting is quite flexible, for example: *TP53* (upregulated), *BRCA1* (downregulated)). Specify the disease type (for example triple negative breast cancer). Enter the target variable, which is just basically the variable you used to fit your statistical learning model (for example: cisplatin sensitive/resistant subgroups). Again, you can be quite flexible when it comes to prompting, the model will incorporate any additional information.
+3. Fill out the fields in the app. First set your NVIDIA API/OPENAI API key. Then enter the gene names which were indicated as important or differentially expressed (you can specify the direction as well, the prompting is quite flexible, for example: *TP53* (upregulated), *BRCA1* (downregulated)). Specify the disease type (for example triple negative breast cancer). Enter the target variable, which is just basically the variable you used to fit your statistical learning model (for example: cisplatin sensitive/resistant subgroups). Again, you can be quite flexible when it comes to prompting, the model will incorporate any additional information.
 
 
 ## 🧩 How It Works
