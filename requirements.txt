@@ -1,0 +1,10 @@
+streamlit
+langchain_openai
+langchain
+langchain-community
+langgraph
+langchain_nvidia_ai_endpoints
+nest_asyncio
+nemoguardrails
+langchain_core==0.2.3
+chromadb
