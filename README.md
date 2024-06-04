@@ -26,21 +26,21 @@ The model comes in two versions:
 ## 📚 Features
 
 - **Hypothesis Generation**: Generate unique, and testable scientific hypothesis based on the output of statistical learning tools, representable on gene level (DeSeq2, ..).
-- **Customizable Vector Database**: Tailor the vector database to fit your specific field or area of interest (tested on papers related to breast cancer research). The current model uses the following database (stored in a ChromaDB database) of more than 9000 scientific publication abstracts in breast cancer research:  [database](https://huggingface.co/datasets/Gaborandi/breast_cancer_pubmed_abstracts)
+- **Customizable Vector Database**: Tailor the vector database to fit your specific field or area of interest (tested on papers related to breast cancer research). The current model uses the following database (stored in a ChromaDB database, using text-embedding-3-large or embed-qa-4 for embedding) of more than 9000 scientific publication abstracts in breast cancer research:  [database](https://huggingface.co/datasets/Gaborandi/breast_cancer_pubmed_abstracts)
 - **High-Quality Output**: Utilizes state-of-the-art language models to ensure high relevance and quality of generated ideas, with in-vitro and in-silico validation recommendations.
 - **User-Friendly Interface**: Easy-to-use interface for seamless idea generation, using the streamlit framework.
 
 ## 🌟 Demo
 
-Check out our [live demo](https://scigenllmagent.site/) to see the app in action!
+Check out our [live demo](https://scigenllmagent.site/) to see the app in action! Currently, the **LLM-SCIGEN-BRCA** model is hosted on this website.
 
 ## 🛠️ Installation
 
 To get started, clone this repository and install the necessary dependencies:
 
 ```bash
-git clone https://github.com/yourusername/scientific-idea-generator.git
-cd scientific-idea-generator
+git clone https://github.com/Paureel/LLM-SCIGEN-BRCA
+cd LLM-SCIGEN-BRCA
 pip install -r requirements.txt
 ```
 
